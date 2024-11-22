@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [HomeComponent, NavBarComponent],
   template: `
-    <h1>hello {{title}}</h1>
+    <app-nav-bar></app-nav-bar>
+
+    <app-home></app-home>
+
   `,
   styles: [`
-    h1 {
-      color: blue;
-    }
-    
+
   `],
 })
 export class AppComponent {
